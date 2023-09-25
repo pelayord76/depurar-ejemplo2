@@ -16,28 +16,28 @@
 
 
 var nombres = [];
-
 var numeroNombres = NaN;
+var nombreBuscado = "";
+var encontrado = false;
 
-var nombreBuscado = "", encontrado = false;
-
-while (numeroNombres == NaN) {
-	numeroNombres = parseInt(prompt("¿Cuántos nombres vas a leer?", "10"));
+while (isNaN(numeroNombres)) {
+	numeroNombres = prompt("¿Cuántos nombres vas a escribir?");
+	numeroNombres = parseInt(numeroNombres);
 }
 
-for (var i = 0; i < numeroNombres; i++) {
-	nombres[i] = prompt("Introduce un nombre", "Agapito ");
+for (let i = 0; i < numeroNombres; i++) {
+	let nombre = prompt("Introduce un nombre:");
+	nombres[i] = nombre;
 }
 
-nombreBuscado = prompt("¿Qué nombre deseas buscar?", "");
+nombreBuscado = prompt("¿Qué nombre deseas buscar?");
 
-for (var i = 0; i < nombres.length; i++) {
-	if (nombres[i] = nombre_buscado) {
+for (let i = 0; i < nombres.length; i++) {
+	if (nombres[i] == nombreBuscado) {
 		encontrado = true;
 		alert(nombreBuscado + " está en la posición " + i);
 
 	}
-
-	if (!encontrado)
-		prompt("No se encuentra el nombre buscado");
 }
+
+if (!encontrado) alert("No se encuentra el nombre buscado");

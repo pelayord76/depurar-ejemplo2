@@ -10,45 +10,34 @@
  * 
  * Se informará al usuario de la posición que ocupa el nombre o, en caso de no estar, del error correspondiente.
  */
- 
- /* Encontrar los errores del siguiente script, usando el depurador de Google Chrome */
+
+/* Encontrar los errores del siguiente script, usando el depurador de Google Chrome */
 
 
 
-var nombres=[];
+var nombres = [];
 
-var numeroNombres=NaN; 
+var numeroNombres = NaN;
 
+var nombreBuscado = "", encontrado = false;
 
-var nombreBuscado="",encontrado=false;
+while (numeroNombres == NaN) {
+	numeroNombres = parseInt(prompt("¿Cuántos nombres vas a leer?", "10"));
+}
 
+for (var i = 0; i < numeroNombres; i++) {
+	nombres[i] = prompt("Introduce un nombre", "Agapito ");
+}
 
+nombreBuscado = prompt("¿Qué nombre deseas buscar?", "");
 
+for (var i = 0; i < nombres.length; i++) {
+	if (nombres[i] = nombre_buscado) {
+		encontrado = true;
+		alert(nombreBuscado + " está en la posición "i);
 
- while(numeroNombres==NaN){
-	numeroNombres=parseInt(prompt("¿Cuántos nombres vas a leer?","10"));
- }
-   
+	}
 
-
-for (var i=0;i<numeroNombres;i++){
-	nombres[i]=prompt("Introduce un nombre","Agapito ");
-} 
-
-
-nombreBuscado=prompt("¿Qué nombre deseas buscar?","");
-
-
-
-for (var i=0;i<nombres.length;i++){
-	if(nombres[i]=nombre_buscado){
-		encontrado=true;
-		alert(nombreBuscado+" está en la posición "i);
-	
-} 
-
-if(!encontrado)
+	if (!encontrado)
 		prompt("No se encuentra el nombre buscado");
-		
-
-
+}

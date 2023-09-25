@@ -34,7 +34,7 @@ nombreBuscado = prompt("¿Qué nombre deseas buscar?", "");
 for (var i = 0; i < nombres.length; i++) {
 	if (nombres[i] = nombre_buscado) {
 		encontrado = true;
-		alert(nombreBuscado + " está en la posición "i);
+		alert(nombreBuscado + " está en la posición " + i);
 
 	}
 
